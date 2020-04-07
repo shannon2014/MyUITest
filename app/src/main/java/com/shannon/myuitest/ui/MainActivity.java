@@ -1,18 +1,17 @@
-package shannon.android.com.myuitest.ui;
+package com.shannon.myuitest.ui;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import shannon.android.com.myuitest.R;
-import shannon.android.com.myuitest.utis.DisplayUtil;
-import shannon.android.com.myuitest.utis.LogUtil;
+import com.shannon.myuitest.R;
+import com.shannon.myuitest.utis.DisplayUtil;
+import com.shannon.myuitest.utis.LogUtil;
 
 /**
  * Created by hegui on 2020/3/18.

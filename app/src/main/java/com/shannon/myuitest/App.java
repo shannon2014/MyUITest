@@ -1,8 +1,8 @@
-package shannon.android.com.myuitest;
+package com.shannon.myuitest;
 
 import android.app.Application;
 
-import shannon.android.com.myuitest.utis.AppUtil;
+import com.shannon.myuitest.utis.AppUtil;
 
 /**
  * Created by hegui on 2020/3/18.

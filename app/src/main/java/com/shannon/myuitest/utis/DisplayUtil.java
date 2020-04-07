@@ -1,4 +1,4 @@
-package shannon.android.com.myuitest.utis;
+package com.shannon.myuitest.utis;
 
 import android.util.DisplayMetrics;
 

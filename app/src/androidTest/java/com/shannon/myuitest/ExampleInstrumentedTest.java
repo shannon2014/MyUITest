@@ -1,4 +1,4 @@
-package shannon.android.com.myuitest;
+package com.shannon.myuitest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("shannon.android.com.myuitest", appContext.getPackageName());
+        assertEquals("com.shannon.myuitest", appContext.getPackageName());
     }
 }

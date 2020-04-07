@@ -1,4 +1,4 @@
-package shannon.android.com.myuitest;
+package com.shannon.myuitest;
 
 import org.junit.Test;
 

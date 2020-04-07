@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package shannon.android.com.myuitest.utis;
+package com.shannon.myuitest.utis;
 
 import android.util.Log;
 
