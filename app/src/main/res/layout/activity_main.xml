@@ -3,9 +3,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/iv_png"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/img"/>
+        android:src="@drawable/img_webp"/>
+
+    <TextView
+        android:id="@+id/tv_png"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_png"
+        android:padding="30dp"
+        android:hint="开始测试png的缩小耗时"
+        android:text="这是原图"></TextView>
+
+    <ImageView
+        android:id="@+id/iv_webp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/iv_png"
+        android:src="@drawable/img_webp_400"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_webp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_webp"
+        android:layout_toRightOf="@id/iv_webp"
+        android:padding="30dp"
+        android:hint="开始测试webp的缩小耗时"
+        android:text="这是webP压缩的图"></TextView>
+
+    <ImageView
+        android:id="@+id/iv_full"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/iv_webp"
+        android:src="@drawable/img_400_png"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_full"
+        android:layout_toRightOf="@id/iv_full"
+        android:padding="30dp"
+        android:hint="开始测试png的原图耗时"
+        android:text="这是png压缩的图"></TextView>
+
+
 </RelativeLayout>

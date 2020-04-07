@@ -16,7 +16,69 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+    flavorDimensions "channel"
+    productFlavors {
+        prod {
+            dimension "channel"
+        }
+    }
+
+
+
+    task createJavaDir(){
+        print(getRootDir())
+        File rootFile = getRootDir();
+        def paths = ["$rootFile/output","$rootFile/temp"]
+        doFirst {
+            paths.each {
+                path ->
+                    createFile(path)
+                    /*
+                    File file = new File(path)
+                    if(!file.exists()){
+                        file.mkdirs()
+                    }
+                    */
+            }
+
+        }
+    }
+
+    task createJavaFile(){
+        dependsOn 'createJavaDir'
+    }
+
 }
+
+def createFile(path){
+    File file = new File(path)
+    if(!file.exists()){
+        file.mkdirs()
+    }
+}
+android.applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def outputFile = output.outputFile
+        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+            def fileName
+            if (variant.buildType.name == "release") {
+                // 输出apk名称为
+                fileName = "MyUITest_v${variant.versionName}_${"release"}.apk"
+            } else {
+                fileName = "MyUITest_v${variant.versionName}_debug.apk"
+            }
+            outputFileName = fileName
+        }
+
+    }
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
