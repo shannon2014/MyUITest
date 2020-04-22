@@ -1,0 +1,89 @@
+ext {
+    android = [
+            compileSdkVersion      : 29,
+            buildToolsVersion      : "29.0.3",
+            minSdkVersion          : 26,
+            targetSdkVersion       : 26,
+            versionCode            : 1,
+            versionName            : "1.0"
+    ]
+    //因为support库都是同一个版本，单独拎出来，方便修改
+    dependVersion = [
+            support: "27.1.1"
+    ]
+
+    dependencies = [
+            // android-support
+            "support-v4"            : "com.android.support:support-v4:${dependVersion.support}",
+            "appcompat-v7"          : "com.android.support:appcompat-v7:${dependVersion.support}",
+            "design"                : "com.android.support:design:${dependVersion.support}",
+            "recyclerview"          : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            "cardview"              : "com.android.support:cardview-v7:${dependVersion.support}",
+    ]
+}
+
+/*
+ groovy语法学习
+ 2.1 定义变量
+ 2.2 集合与容器
+ 2.3 逻辑控制
+ 2.4 方法定义
+ 2.5 闭包
+ 2.6 IO操作
+ */
+
+// 2.1 定义变量 Object,Integer,String,GString,boolean
+def tom = 'Tom'
+def x1 = "hello ${tom}"
+def x2 = 'hello ${tom}'
+println('x1 = ' + x1 + ', x2 = ' + x2)     // x1 = hello Tom, x2 = hello ${tom}
+
+// 2.2 集合与容器
+// List [],等效于Java的ArrayList
+def aList = [5,'hello',true]
+println('第一个元素是' + aList[1] + ', '+ aList.get(1)) // 第一个元素是hello, hello
+aList.add(1,'hello world')
+println('第一个元素是' + aList[1] + ', '+ aList.get(1)) // 第一个元素是hello world, hello world
+aList.set(1,'Hi')
+println('第一个元素是' + aList[1] + ', '+ aList.get(1)) // 第一个元素是Hi, Hi
+aList.removeAt(2)
+def result = aList.find {
+    it > 2
+}
+println('第一个大于2的值为' + result) // 第一个大于2的值为5
+aList.each {
+    print(it.toString() + ',')
+}
+println()
+aList.eachWithIndex { Object entry, int i ->
+    println('i=' + i + ', entry='+ entry)
+}
+
+// Map [:]，等效于Java的LinkedHashMap
+def aMap = ["name":'shannon',
+            "age":18,
+            "boy":true,
+    ]
+println('name是' + aMap['name'] + ', '+ aMap.get('name')) // name是shannon, shannon
+aMap.put("phone",12345)
+aMap.each {
+    println('key ' + it.key + ', value = ' + it.value)
+}
+aMap.remove('boy')
+aMap.each { key,value ->
+    println('key ' + key + ', value = ' + value)
+}
+
+
+// Range
+def range = 5..8
+println('range的第一个元素是' + range[1] + ', '+ range.get(1)) // range的第一个元素是5, 5
+for(i in range){
+    print(i + ',')
+}
+println()
+range.each {
+    print(it + ',')
+}
+println()
+

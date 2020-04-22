@@ -1,10 +1,14 @@
 package com.shannon.myuitest.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.view.LayoutInflaterCompat;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +36,13 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         initUI();
         init();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
+
+        return super.onCreateView(name, context, attrs);
     }
 
     private void initUI() {

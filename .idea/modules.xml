@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/MyUITest-app.iml" filepath="$PROJECT_DIR$/app/MyUITest-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/code-MyUITest.iml" filepath="$PROJECT_DIR$/code-MyUITest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle-learn/gradle-learn.iml" filepath="$PROJECT_DIR$/gradle-learn/gradle-learn.iml" />
     </modules>
   </component>
 </project>
