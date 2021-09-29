@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    compileSdkVersion 29
+    buildToolsVersion = '29.0.3'
     defaultConfig {
         applicationId "com.shannon.myuitest"
         minSdkVersion rootProject.ext.android.minSdkVersion
@@ -89,4 +90,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(path: ':gradle-learn')
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'org.ujorm:ujo-core:1.45'
 }

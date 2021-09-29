@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyUITest.iml" filepath="$PROJECT_DIR$/MyUITest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/MyUITest-app.iml" filepath="$PROJECT_DIR$/app/MyUITest-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/code-MyUITest.iml" filepath="$PROJECT_DIR$/code-MyUITest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gradle-learn/gradle-learn.iml" filepath="$PROJECT_DIR$/gradle-learn/gradle-learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyUITest.iml" filepath="$PROJECT_DIR$/.idea/modules/MyUITest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyUITest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyUITest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-learn/MyUITest.gradle-learn.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-learn/MyUITest.gradle-learn.iml" />
     </modules>
   </component>
 </project>
