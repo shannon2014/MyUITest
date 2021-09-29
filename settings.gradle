@@ -1,1 +1,2 @@
+include ':TestGradlePlugin'
 include ':app', ':gradle-learn'

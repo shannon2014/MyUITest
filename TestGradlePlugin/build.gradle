@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src/main/groovy']
+        }
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://maven.google.com" }
+}
+
+dependencies {
+    //gradle sdk
+    implementation gradleApi()
+    //groovy sdk
+    implementation localGroovy()
+}
